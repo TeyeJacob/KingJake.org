@@ -1,0 +1,305 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Modern and professional font */
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Set base font size to smaller for better readability */
+    background: #f5f7fa; /* Light gray background for a clean look */
+    color: #333; /* Neutral dark text color for readability */
+    line-height: 1.8; /* Improve text readability */
+    background-image: url('download (2).jfif');
+}
+
+
+.profile-pic {
+    width: 100px; /* Set the width of the profile picture */
+    height: 100px; /* Set the height of the profile picture */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image fits within the dimensions */
+    margin-bottom: 20px; /* Add spacing below the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a polished look */
+}
+
+
+/* Header */
+.header {
+    background-color:pink;
+    color:black;
+    font-size: x-small;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 5px solid #003366; /* Subtle border for structure */
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #004aad; /* Professional blue */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffcc00; /* Golden hover effect */
+}
+
+/* Sections */
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px; /* Limit the width for better readability */
+    background: white;
+    border-radius: 12px; /* Subtle rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Modern shadow for depth */
+    margin-bottom: 40px; /* Add spacing between sections */
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #004aad;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.section p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+
+
+/* Night Mode Styles */
+body.night-mode {
+    background: #1c1c28;
+    color: #d1d1d1;
+}
+
+body.night-mode .header {
+    background: #1f2a38;
+}
+
+body.night-mode .navbar {
+    background: #1a242f;
+}
+
+body.night-mode .navbar a {
+    color: #d1d1d1;
+}
+
+body.night-mode .navbar a:hover {
+    color: #4a90e2;
+}
+
+body.night-mode .section {
+    background: #232a36;
+    color: #d1d1d1;
+}
+
+body.night-mode .footer {
+    background: #1f2a38;
+}
+/* Responsive Navigation Menu */
+.navbar {
+    display: none; /* Hide navbar by default on mobile */
+    flex-direction: column;
+    align-items: center;
+    background: #2c3e50;
+    padding: 10px 0;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+}
+
+.navbar.navbar-visible {
+    display: flex;
+    transform: translateY(0);
+}
+
+.navbar a {
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        display: flex; /* Show navbar on larger screens */
+        flex-direction: row;
+        position: static;
+        transform: none;
+    }
+
+    .navbar a {
+        margin: 0 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Buttons */
+button, .add-picture-button {
+    background-color: #004aad;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .add-picture-button:hover {
+    background-color: #003366;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: #003366;
+    color: white;
+    font-size: 0.9rem;
+    border-top: 5px solid #004aad;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Lists */
+.memory-list, .activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.memory-list li, .activity-list li {
+    background: #004aad;
+    color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.memory-list li:hover, .activity-list li:hover {
+    background: #003366;
+    transform: translateY(-5px); /* Slight lift effect */
+    cursor: pointer;
+}
+
+/* Feedback Form */
+#feedbackForm {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#feedbackForm label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+#feedbackForm select,
+#feedbackForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#feedbackForm button {
+    background-color: #004aad;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#feedbackForm button:hover {
+    background-color: #003366;
+    transform: scale(1.05); /* Slight zoom effect */
+}

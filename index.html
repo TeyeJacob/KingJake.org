@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship Group</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <header class="header">
+        <img src="WhatsApp Image 2025-04-12 at 7.22.39 PM.jpeg" alt="Profile Picture" class="profile-pic">
+        <h1>“Welcome to The Relationship Roundtable! ❤️🌈This is a dynamic and interactive community where we dive into the latest topics and trends in relationships. From dating and communication to conflict resolution and personal growth, we'll explore it all. Share your insights, ask questions, and get ready for lively discussions and meaningful connections!"</h1>
+        <p>Good Morning! Welcome to our group.</p>
+
+    </header>
+
+    <nav class="navbar">
+        <a href="#memories">Memories</a>
+        <a href="#pictures">Old Pictures</a>
+        <a href="#activities">Weekly Activities</a>
+    </nav>
+
+    <section id="memories" class="section">
+        <h2>Group Memories</h2>
+        <p>Here are some of the cherished moments we've shared together as a group. Click on a memory to view or add pictures.</p>
+        <ul class="memory-list">
+            <li data-memory="retreat2025">
+                Annual Retreat 2025
+                <button class="add-picture-button" data-memory="retreat2025">Add Picture</button>
+            </li>
+            <li data-memory="serviceDay">
+                Community Service Day
+                <button class="add-picture-button" data-memory="serviceDay">Add Picture</button>
+            </li>
+            <li data-memory="birthdays">
+                Birthday Celebrations
+                <button class="add-picture-button" data-memory="birthdays">Add Picture</button>
+            </li>
+        </ul>
+    </section>
+
+    
+    <section id="pictures" class="section">
+        <h2>Old Pictures</h2>
+        <div class="gallery" id="gallery">
+           
+        </div>
+        <button id="addPictureButton">Add Picture</button>
+    </section>
+
+    <section id="activities" class="section">
+        <h2>Weekly Activities</h2>
+        <ul class="activity-list">
+            <li>Monday: Men Crush Monday(7am- 7pm)
+                • Riddle Riddle (7:30pm - 9:30pm) </li>
+            <li>Tuesday: Relationship Talk and Discussions On love Connections</li>
+            <li>Wednesday: Women Crush Wednesday _(6am -6pm)_ 
+                • Health Talk or Tips ( 6pm - 9pm) </li>
+            <li>Thursday: Throwback Pictures, Videos and memories ( 8am - 7pm) 
+                • Code Game ( 8pm - 9:30pm ) 
+                • Movie Night ( 10pm - 12am) </li>               
+            <li>Friday: Business & Advertising (7am - 8pm) 
+                • Freaky Friday ( 9pm - 11:30pm) </li>
+            <li>Saturday: Call or Visit a Member Day (6am - 5pm) 
+                 Anonymous Messages Or Chat ( 6pm - 10pm) </li>
+            <li>Sunday: Selfie  Sunday with Bible Verses (6am- 6pm) 
+                • General Hot seat ( 8pm - 9:30pm) 
+               </li>
+        </ul>
+    </section>
+
+
+    <script src="functions.js"></script>
+</body>
+</html>
+<section id="feedback" class="section">
+    <h2>Submit Your Feedback</h2>
+    <form id="feedbackForm">
+        <label for="activityDay">Select a Day:</label>
+        <select id="activityDay" name="activity_day" required>
+            <option value="" disabled selected>Select a day</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+        <br><br>
+        <label for="feedbackText">Your Feedback:</label>
+        <textarea id="feedbackText" name="feedback_text" rows="4" placeholder="Write your feedback here..." required></textarea>
+        <br><br>
+        <button type="submit">Submit Feedback</button>
+    </form>
+</section>
+<footer class="footer">
+    <p>&copy; 2025 Relationship Roundtable. All rights reserved.</p>
+</footer>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Test</title>
+    <style>
+        .love-emoji {
+            position: absolute;
+            z-index: 1000;
+            pointer-events: none;
+            animation: floatUp 2s ease-out forwards;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function generateLoveEmojis() {
+            const body = document.body;
+    
+            const emoji = document.createElement('div');
+            emoji.textContent = '❤️';
+            emoji.className = 'love-emoji';
+    
+            emoji.style.position = 'absolute';
+            emoji.style.fontSize = `${Math.random() * 20 + 20}px`; // Random size
+            emoji.style.left = `${Math.random() * window.innerWidth}px`; // Random horizontal position
+            emoji.style.top = `${Math.random() * document.documentElement.scrollHeight}px`; // Random vertical position across the entire page
+    
+            body.appendChild(emoji);
+    
+            setTimeout(() => {
+                emoji.style.opacity = '0';
+                emoji.style.transform = `translateY(-50px)`;
+            }, 100);
+    
+            setTimeout(() => {
+                body.removeChild(emoji);
+            }, 2000);
+        }
+    
+        setInterval(generateLoveEmojis, 300);
+    </script>
+        setInterval(generateLoveEmojis, 300);
+    </script>
+</body>
+</html>
+
+
+
+
+<script>
+    function toggleNightMode() {
+        const body = document.body;
+        const currentHour = new Date().getHours(); // Get the current hour (0-23)
+
+        if (currentHour >= 6 && currentHour < 12) {
+            // Morning
+            alert("Good Morning! Welcome to our group.");
+            body.classList.remove('night-mode'); // Ensure night mode is off
+        } else if (currentHour >= 12 && currentHour < 18) {
+            // Afternoon
+            alert("Good Afternoon! Hope you're having a great day.");
+            body.classList.remove('night-mode'); // Ensure night mode is off
+        } else {
+            // Evening or Night
+            alert("Good Evening! Night mode is now activated.");
+            body.classList.add('night-mode'); // Turn on night mode
+        }
+    }
+
+    // Call the function when the page loads
+    window.onload = toggleNightMode;
+</script>
